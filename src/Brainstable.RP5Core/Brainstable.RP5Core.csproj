@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Title>Brainstable.RP5Core</Title>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>1.0.0</PackageVersion>
+    </PropertyGroup>
+
+</Project>
