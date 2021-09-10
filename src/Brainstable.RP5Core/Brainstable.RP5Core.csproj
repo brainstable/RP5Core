@@ -3,10 +3,14 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <Title>Brainstable.RP5Core</Title>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <FileVersion>1.0.0.0</FileVersion>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageVersion>1.0.0</PackageVersion>
+        <Authors>brainstable</Authors>
+        <RepositoryUrl>https://github.com/brainstable/RP5Core.git</RepositoryUrl>
+        <Description>Reading archive-files from site www.rp5.ru</Description>
+        <Copyright>Copyright(c) Brainstable 2021</Copyright>
     </PropertyGroup>
 
 </Project>
