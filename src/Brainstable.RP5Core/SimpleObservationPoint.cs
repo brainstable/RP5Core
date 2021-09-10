@@ -34,13 +34,13 @@ namespace Brainstable.RP5Core
         public static SimpleObservationPoint CreateFromArrayValues(string[] stringValues, Dictionary<string, int> structure)
         {
             SimpleObservationPoint p = null;
+            double t;
             try
             {
                 p = new SimpleObservationPoint();
                 p.DateTime = Convert.ToDateTime(stringValues[0].Replace("\"", "").Replace('.', ','));
                 if (structure.ContainsKey("T"))
                 {
-                    double t;
                     if (Double.TryParse(stringValues[structure["T"]].Replace("\"", "").Replace('.', ','), out t))
                     {
                         p.Temperature = t;
@@ -49,7 +49,6 @@ namespace Brainstable.RP5Core
 
                 if (structure.ContainsKey("TN"))
                 {
-                    double t;
                     if (Double.TryParse(stringValues[structure["TN"]].Replace("\"", "").Replace('.', ','), out t))
                     {
                         p.MinTemperature = t;
@@ -58,7 +57,6 @@ namespace Brainstable.RP5Core
 
                 if (structure.ContainsKey("TX"))
                 {
-                    double t;
                     if (Double.TryParse(stringValues[structure["TX"]].Replace("\"", "").Replace('.', ','), out t))
                     {
                         p.MaxTemperature = t;
@@ -67,7 +65,6 @@ namespace Brainstable.RP5Core
 
                 if (structure.ContainsKey("RRR"))
                 {
-                    double t;
                     if (Double.TryParse(stringValues[structure["RRR"]].Replace("\"", "").Replace('.', ','), out t))
                     {
                         p.Rainfall = t;
@@ -76,16 +73,15 @@ namespace Brainstable.RP5Core
 
                 if (structure.ContainsKey("SSS"))
                 {
-                    double t;
                     if (Double.TryParse(stringValues[structure["SSS"]].Replace("\"", "").Replace('.', ','), out t))
                     {
                         p.SnowHight = t;
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                throw new Exception($"{ex.Source} - {ex.Message}");
             }
             return p;
         }
