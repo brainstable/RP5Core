@@ -1,2 +1,2 @@
 # RP5Core
-Read from file archive weather RP5
+Read archive-files from site www.rp5.ru
